@@ -12,182 +12,160 @@
 # Error details
 
 ```
-Test timeout of 60000ms exceeded.
-```
+Error: locator.selectOption: Error: strict mode violation: getByLabel(/Anrede|Salutation/i) resolved to 2 elements:
+    1) <select class="form-select" name="salutationId" id="personalSalutation" aria-describedby="personalSalutation-feedback" autocomplete="section-personal honorific-prefix">…</select> aka getByRole('group', { name: 'Persönliche Informationen' }).getByLabel('Anrede')
+    2) <select class="form-select" name="shippingAddress[salutationId]" id="shippingAddresspersonalSalutation" autocomplete="section-personal honorific-prefix" aria-describedby="shippingAddresspersonalSalutation-feedback">…</select> aka locator('#shippingAddresspersonalSalutation')
 
-```
-Error: locator.fill: Test timeout of 60000ms exceeded.
 Call log:
-  - waiting for locator('form[action*="/checkout/register"], .register-form, #registerForm').first().locator('#personalFirstName, input[name="firstName"]').first()
+  - waiting for getByLabel(/Anrede|Salutation/i)
 
 ```
 
 # Page snapshot
 
 ```yaml
-- generic [active] [ref=f3e1]:
-  - link "Zum Hauptinhalt springen" [ref=f3e3] [cursor=pointer]:
+- generic [active] [ref=f2e1]:
+  - link "Zum Hauptinhalt springen" [ref=f2e3] [cursor=pointer]:
     - /url: "#content-main"
-  - banner [ref=f3e4]:
-    - generic [ref=f3e6]:
-      - link [ref=f3e9] [cursor=pointer]:
+  - banner [ref=f2e4]:
+    - generic [ref=f2e6]:
+      - link [ref=f2e9] [cursor=pointer]:
         - /url: /
-        - img "Zur Startseite gehen" [ref=f3e11]
-      - generic [ref=f3e12]:
-        - strong [ref=f3e13]: Fragen zu Ihrer Bestellung?
-        - strong [ref=f3e14]:
-          - link "12345-123456789" [ref=f3e15] [cursor=pointer]:
+        - img "Zur Startseite gehen" [ref=f2e11]
+      - generic [ref=f2e12]:
+        - strong [ref=f2e13]: Fragen zu Ihrer Bestellung?
+        - strong [ref=f2e14]:
+          - link "12345-123456789" [ref=f2e15] [cursor=pointer]:
             - /url: tel:+4912345123456789
         - text: Täglich 7:30 bis 22:00 Uhr
-      - link "Zurück zum Shop" [ref=f3e17] [cursor=pointer]:
+      - link "Zurück zum Shop" [ref=f2e17] [cursor=pointer]:
         - /url: /
-  - main [ref=f3e19]:
-    - generic [ref=f3e23]:
-      - generic [ref=f3e24]:
-        - heading "Versandinformationen" [level=1] [ref=f3e25]
-        - link [ref=f3e30] [cursor=pointer]:
+  - main [ref=f2e19]:
+    - generic [ref=f2e23]:
+      - generic [ref=f2e24]:
+        - heading "Versandinformationen" [level=1] [ref=f2e25]
+        - link [ref=f2e30] [cursor=pointer]:
           - /url: "#loginCollapse"
-          - strong [ref=f3e31]: Sie sind bereits Kunde? Klicken Sie hier, um sich einzuloggen.
-        - generic [ref=f3e33]:
-          - heading "Persönliche Informationen" [level=2] [ref=f3e34]
-          - generic [ref=f3e35]:
-            - group "Persönliche Informationen" [ref=f3e36]:
-              - generic [ref=f3e39]:
-                - generic [ref=f3e40]: Anrede
-                - combobox "Anrede" [ref=f3e41]:
-                  - option "Not specified"
-                  - option "Mrs." [selected]
+          - strong [ref=f2e31]: Sie sind bereits Kunde? Klicken Sie hier, um sich einzuloggen.
+        - generic [ref=f2e33]:
+          - heading "Persönliche Informationen" [level=2] [ref=f2e34]
+          - generic [ref=f2e35]:
+            - group "Persönliche Informationen" [ref=f2e36]:
+              - generic [ref=f2e39]:
+                - generic [ref=f2e40]: Anrede
+                - combobox "Anrede" [ref=f2e41]:
+                  - option "Not specified" [selected]
+                  - option "Mrs."
                   - option "Mr."
-              - generic [ref=f3e42]:
-                - generic [ref=f3e43]:
-                  - generic [ref=f3e44]: Vorname *
-                  - textbox "Vorname" [ref=f3e45]
-                - generic [ref=f3e46]:
-                  - generic [ref=f3e47]: Nachname *
-                  - textbox "Nachname" [ref=f3e48]
-              - generic [ref=f3e49]:
-                - checkbox "Kundenkonto anlegen." [ref=f3e50]
-                - generic [ref=f3e51]: Kundenkonto anlegen.
-              - generic [ref=f3e53]:
-                - generic [ref=f3e54]: E-Mail-Adresse *
-                - textbox "E-Mail-Adresse" [ref=f3e55]
-            - generic [ref=f3e56]:
-              - group "Ihre Adresse" [ref=f3e57]:
-                - generic [ref=f3e59]:
-                  - generic [ref=f3e60]:
-                    - generic [ref=f3e61]: Straße und Hausnummer *
-                    - textbox "Straße und Hausnummer" [ref=f3e62]
-                  - generic [ref=f3e63]:
-                    - generic [ref=f3e64]: PLZ *
-                    - textbox "PLZ" [ref=f3e65]
-                  - generic [ref=f3e66]:
-                    - generic [ref=f3e67]: Ort *
-                    - textbox "Ort" [ref=f3e68]
-                - generic [ref=f3e69]:
-                  - generic [ref=f3e70]:
-                    - generic [ref=f3e71]: Land *
-                    - combobox "Land" [ref=f3e72]:
-                      - option "Germany" [selected]
-                  - generic [ref=f3e73]:
-                    - generic [ref=f3e74]: Bundesland
-                    - combobox "Bundesland" [ref=f3e75]:
-                      - option "Bundesland auswählen ..." [selected]
-                      - option "Baden-Württemberg"
-                      - option "Bavaria"
-                      - option "Berlin"
-                      - option "Brandenburg"
-                      - option "Bremen"
-                      - option "Hamburg"
-                      - option "Hesse"
-                      - option "Lower Saxony"
-                      - option "Mecklenburg-Western Pomerania"
-                      - option "North Rhine-Westphalia"
-                      - option "Rhineland-Palatinate"
-                      - option "Saarland"
-                      - option "Saxony"
-                      - option "Saxony-Anhalt"
-                      - option "Schleswig-Holstein"
-                      - option "Thuringia"
-              - generic [ref=f3e77]:
-                - checkbox "Lieferadresse weicht von Rechnungsadresse ab." [ref=f3e78]
-                - generic [ref=f3e79]: Lieferadresse weicht von Rechnungsadresse ab.
-            - group [ref=f3e80]:
-              - strong [ref=f3e82]: Datenschutz
-              - generic [ref=f3e84]:
+              - generic [ref=f2e42]:
+                - generic [ref=f2e43]:
+                  - generic [ref=f2e44]: Vorname *
+                  - textbox "Vorname" [ref=f2e45]
+                - generic [ref=f2e46]:
+                  - generic [ref=f2e47]: Nachname *
+                  - textbox "Nachname" [ref=f2e48]
+              - generic [ref=f2e49]:
+                - checkbox "Kundenkonto anlegen." [ref=f2e50]
+                - generic [ref=f2e51]: Kundenkonto anlegen.
+              - generic [ref=f2e53]:
+                - generic [ref=f2e54]: E-Mail-Adresse *
+                - textbox "E-Mail-Adresse" [ref=f2e55]
+            - generic [ref=f2e56]:
+              - group "Ihre Adresse" [ref=f2e57]:
+                - generic [ref=f2e59]:
+                  - generic [ref=f2e60]:
+                    - generic [ref=f2e61]: Straße und Hausnummer *
+                    - textbox "Straße und Hausnummer" [ref=f2e62]
+                  - generic [ref=f2e63]:
+                    - generic [ref=f2e64]: PLZ *
+                    - textbox "PLZ" [ref=f2e65]
+                  - generic [ref=f2e66]:
+                    - generic [ref=f2e67]: Ort *
+                    - textbox "Ort" [ref=f2e68]
+                - generic [ref=f2e70]:
+                  - generic [ref=f2e71]: Land *
+                  - combobox "Land" [ref=f2e72]:
+                    - option "Germany" [selected]
+              - generic [ref=f2e74]:
+                - checkbox "Lieferadresse weicht von Rechnungsadresse ab." [ref=f2e75]
+                - generic [ref=f2e76]: Lieferadresse weicht von Rechnungsadresse ab.
+            - group [ref=f2e77]:
+              - strong [ref=f2e79]: Datenschutz
+              - generic [ref=f2e81]:
                 - text: Ich habe die
-                - button "Datenschutzbestimmungen" [ref=f3e85] [cursor=pointer]
+                - button "Datenschutzbestimmungen" [ref=f2e82] [cursor=pointer]
                 - text: zur Kenntnis genommen und die
-                - button "AGB" [ref=f3e86] [cursor=pointer]
+                - button "AGB" [ref=f2e83] [cursor=pointer]
                 - text: gelesen und bin mit ihnen einverstanden.
-            - paragraph [ref=f3e87]: Die mit einem Stern (*) markierten Felder sind Pflichtfelder.
-            - button "Weiter" [ref=f3e89] [cursor=pointer]
-      - generic [ref=f3e91]:
-        - generic [ref=f3e92]:
-          - heading "Zusammenfassung" [level=2] [ref=f3e93]
-          - generic [ref=f3e95]:
-            - alert [ref=f3e96]: Warenkorb enthält eine Position. Der Gesamtwert beträgt €10.00.
-            - generic [ref=f3e97]:
-              - term [ref=f3e98]: Zwischensumme
-              - definition [ref=f3e99]: €10.00
-              - term [ref=f3e100]: Versandkosten
-              - definition [ref=f3e101]: €0.00
-              - term [ref=f3e102]: Gesamtsumme
-              - definition [ref=f3e103]: €10.00
-              - term [ref=f3e104]: Gesamtnettosumme
-              - definition [ref=f3e105]: €8.40
-              - term [ref=f3e106]: zzgl. 19 % MwSt.
-              - definition [ref=f3e107]: €1.60
-        - generic [ref=f3e108]:
-          - heading "Warenkorb" [level=2] [ref=f3e109]
-          - list [ref=f3e110]:
-            - listitem [ref=f3e111]:
-              - generic [ref=f3e112]:
-                - generic [ref=f3e114]:
-                  - link [ref=f3e117] [cursor=pointer]:
+            - paragraph [ref=f2e84]: Die mit einem Stern (*) markierten Felder sind Pflichtfelder.
+            - button "Weiter" [ref=f2e86] [cursor=pointer]
+      - generic [ref=f2e88]:
+        - generic [ref=f2e89]:
+          - heading "Zusammenfassung" [level=2] [ref=f2e90]
+          - generic [ref=f2e92]:
+            - alert [ref=f2e93]: Warenkorb enthält eine Position. Der Gesamtwert beträgt €10.00.
+            - generic [ref=f2e94]:
+              - term [ref=f2e95]: Zwischensumme
+              - definition [ref=f2e96]: €10.00
+              - term [ref=f2e97]: Versandkosten
+              - definition [ref=f2e98]: €0.00
+              - term [ref=f2e99]: Gesamtsumme
+              - definition [ref=f2e100]: €10.00
+              - term [ref=f2e101]: Gesamtnettosumme
+              - definition [ref=f2e102]: €8.40
+              - term [ref=f2e103]: zzgl. 19 % MwSt.
+              - definition [ref=f2e104]: €1.60
+        - generic [ref=f2e105]:
+          - heading "Warenkorb" [level=2] [ref=f2e106]
+          - list [ref=f2e107]:
+            - listitem [ref=f2e108]:
+              - generic [ref=f2e109]:
+                - generic [ref=f2e111]:
+                  - link [ref=f2e114] [cursor=pointer]:
                     - /url: https://www.shopware6-demo.development-s25.com/Westin-Test-12cm/SW10003.5
-                    - img "Westin Test 12cm" [ref=f3e118]
-                  - generic [ref=f3e120]:
-                    - generic [ref=f3e121]: "Produkt-Informationen:"
-                    - link "Westin Test 12cm" [ref=f3e122] [cursor=pointer]:
+                    - img "Westin Test 12cm" [ref=f2e115]
+                  - generic [ref=f2e117]:
+                    - generic [ref=f2e118]: "Produkt-Informationen:"
+                    - link "Westin Test 12cm" [ref=f2e119] [cursor=pointer]:
                       - /url: https://www.shopware6-demo.development-s25.com/Westin-Test-12cm/SW10003.5
-                    - generic [ref=f3e123]: "Colour: Blue | Size: M"
-                    - generic [ref=f3e124]: "Produkt-Nr.: SW10003.5"
-                    - generic [ref=f3e125]: "Lieferzeitraum: 02.09.26 - 04.09.26"
-                    - button "Zum Merkzettel hinzufügen" [ref=f3e127] [cursor=pointer]
-                - generic [ref=f3e133]:
-                  - generic [ref=f3e134]: Anzahl
-                  - generic [ref=f3e135]: "1"
-                - generic [ref=f3e137]:
-                  - generic [ref=f3e138]: "Summe:"
-                  - generic [ref=f3e139]: €10.00
-                - button "Entferne Westin Test 12cm aus dem Warenkorb" [ref=f3e142] [cursor=pointer]
-  - contentinfo [ref=f3e146]:
-    - generic [ref=f3e147]:
-      - list [ref=f3e149]:
-        - listitem [ref=f3e150]:
-          - link "Clothing" [ref=f3e151] [cursor=pointer]:
+                    - generic [ref=f2e120]: "Colour: Blue | Size: M"
+                    - generic [ref=f2e121]: "Produkt-Nr.: SW10003.5"
+                    - generic [ref=f2e122]: "Lieferzeitraum: 02.09.26 - 04.09.26"
+                    - button "Zum Merkzettel hinzufügen" [ref=f2e124] [cursor=pointer]
+                - generic [ref=f2e130]:
+                  - generic [ref=f2e131]: Anzahl
+                  - generic [ref=f2e132]: "1"
+                - generic [ref=f2e134]:
+                  - generic [ref=f2e135]: "Summe:"
+                  - generic [ref=f2e136]: €10.00
+                - button "Entferne Westin Test 12cm aus dem Warenkorb" [ref=f2e139] [cursor=pointer]
+  - contentinfo [ref=f2e143]:
+    - generic [ref=f2e144]:
+      - list [ref=f2e146]:
+        - listitem [ref=f2e147]:
+          - link "Clothing" [ref=f2e148] [cursor=pointer]:
             - /url: https://www.shopware6-demo.development-s25.com/Clothing/
-        - listitem [ref=f3e152]:
-          - link "Free time & electronics" [ref=f3e153] [cursor=pointer]:
+        - listitem [ref=f2e149]:
+          - link "Free time & electronics" [ref=f2e150] [cursor=pointer]:
             - /url: https://www.shopware6-demo.development-s25.com/Free-time-electronics/
-      - paragraph [ref=f3e155]:
+      - paragraph [ref=f2e152]:
         - text: Alle Preise inkl. gesetzl. Mehrwertsteuer zzgl.
-        - link "Versandkosten" [ref=f3e156] [cursor=pointer]:
+        - link "Versandkosten" [ref=f2e153] [cursor=pointer]:
           - /url: /page/cms/019bf75c4d447244a7c6c51eca2cf46b
         - text: und ggf. Nachnahmegebühren, wenn nicht anders angegeben.
-      - generic [ref=f3e157]: Realisiert mit Shopware
+      - generic [ref=f2e154]: Realisiert mit Shopware
   - generic:
     - generic:
       - button "Zurück zum Anfang der Seite springen"
-  - region "Cookie-Voreinstellungen" [ref=f3e161]:
-    - generic [ref=f3e163]:
-      - generic [ref=f3e164]:
+  - region "Cookie-Voreinstellungen" [ref=f2e158]:
+    - generic [ref=f2e160]:
+      - generic [ref=f2e161]:
         - text: Diese Website verwendet Cookies, um eine bestmögliche Erfahrung bieten zu können.
-        - link "Mehr Informationen ..." [ref=f3e165] [cursor=pointer]:
+        - link "Mehr Informationen ..." [ref=f2e162] [cursor=pointer]:
           - /url: /page/cms/019bf75c4d4d7096bb2ff4223748560d
-      - generic [ref=f3e166]:
-        - button "Nur technisch notwendige" [ref=f3e168] [cursor=pointer]
-        - button "Konfigurieren" [ref=f3e170] [cursor=pointer]
+      - generic [ref=f2e163]:
+        - button "Nur technisch notwendige" [ref=f2e165] [cursor=pointer]
+        - button "Konfigurieren" [ref=f2e167] [cursor=pointer]
 ```
 
 # Test source
@@ -197,82 +175,73 @@ Call log:
   2  | 
   3  | test.describe('Order Process', () => {
   4  |   test('TC-PO2: Happy Path - Guest checkout after searching for product', async ({ page }) => {
-  5  |     await page.goto('/');
+  5  |     test.setTimeout(120000);
   6  | 
-  7  |     const searchInput = page.getByPlaceholder('Suchbegriff eingeben ...');
-  8  |     await searchInput.focus();
-  9  |     await searchInput.fill('Westin');
-  10 | 
-  11 |     const searchResultItem = page.locator('.search-suggest-product-name, .search-suggest-product-link')
-  12 |       .filter({ hasText: /Westin/i })
-  13 |       .first();
-  14 | 
-  15 |     await searchResultItem.waitFor({ state: 'visible', timeout: 15000 });
-  16 |     await searchResultItem.click();
+  7  |     await page.goto('/', { waitUntil: 'domcontentloaded', timeout: 60000 });
+  8  | 
+  9  |     const searchInput = page.getByPlaceholder('Suchbegriff eingeben ...');
+  10 |     await searchInput.focus();
+  11 |     await searchInput.fill('Westin');
+  12 | 
+  13 |     const searchResultItem = page
+  14 |       .locator('.search-suggest-product-name, .search-suggest-product-link')
+  15 |       .filter({ hasText: /Westin/i })
+  16 |       .first();
   17 | 
-  18 |     await expect(page).toHaveURL(/\/Westin-/i);
-  19 | 
-  20 |     const addToCartBtn = page.locator('button.btn-buy, button:has-text("In den Warenkorb")').first();
-  21 |     await addToCartBtn.click();
+  18 |     await searchResultItem.waitFor({ state: 'visible', timeout: 15000 });
+  19 |     await searchResultItem.click();
+  20 | 
+  21 |     await expect(page).toHaveURL(/\/Westin-/i);
   22 | 
-  23 |     const checkoutBtn = page.locator('.offcanvas a[href*="/checkout"], a.begin-checkout-btn, a[href*="/checkout/register"]').first();
+  23 |     await page.getByRole('button', { name: /In den Warenkorb/i }).click();
   24 | 
-  25 |     try {
-  26 |       await checkoutBtn.waitFor({ state: 'visible', timeout: 7000 });
-  27 |       await checkoutBtn.click();
-  28 |     } catch {
-  29 |       await page.goto('/checkout/register');
-  30 |     }
-  31 | 
-  32 |     await expect(page).toHaveURL(/\/checkout\/register/);
-  33 | 
-  34 |     // Target the registration container specifically to avoid collision with returning customer login inputs
-  35 |     const registerForm = page.locator('form[action*="/checkout/register"], .register-form, #registerForm').first();
-  36 | 
-  37 |     // Ensure guest registration radio/checkbox is active if present
-  38 |     const createAccountCheckbox = registerForm.locator('input[name="createCustomerAccount"]');
-  39 |     if (await createAccountCheckbox.count() > 0 && await createAccountCheckbox.isChecked()) {
+  25 |     const checkoutBtn = page
+  26 |       .locator('.offcanvas a[href*="/checkout"], a.begin-checkout-btn, a[href*="/checkout/register"]')
+  27 |       .first();
+  28 | 
+  29 |     try {
+  30 |       await checkoutBtn.waitFor({ state: 'visible', timeout: 7000 });
+  31 |       await checkoutBtn.click();
+  32 |     } catch {
+  33 |       await page.goto('/checkout/register', { waitUntil: 'domcontentloaded' });
+  34 |     }
+  35 | 
+  36 |     await expect(page).toHaveURL(/\/checkout\/register/);
+  37 | 
+  38 |     const createAccountCheckbox = page.locator('input[name="createCustomerAccount"]');
+  39 |     if ((await createAccountCheckbox.count()) > 0 && (await createAccountCheckbox.isChecked())) {
   40 |       await createAccountCheckbox.uncheck();
   41 |     }
   42 | 
-  43 |     // Fill registration form fields explicitly inside the register form
-  44 |     await registerForm.locator('select[name="salutationId"]').first().selectOption({ index: 1 });
-> 45 |     await registerForm.locator('#personalFirstName, input[name="firstName"]').first().fill('Jonilda');
-     |                                                                                       ^ Error: locator.fill: Test timeout of 60000ms exceeded.
-  46 |     await registerForm.locator('#personalLastName, input[name="lastName"]').first().fill('Snow');
-  47 |     await registerForm.locator('#personalMail, input[name="email"]').first().fill(`guest_${Date.now()}@example.com`);
-  48 | 
-  49 |     await registerForm.locator('#billingAddressAddressStreet, input[name="billingAddress[street]"]').first().fill('Teststraße 123');
-  50 |     await registerForm.locator('#billingAddressAddressZipcode, input[name="billingAddress[zipcode]"]').first().fill('10115');
-  51 |     await registerForm.locator('#billingAddressAddressCity, input[name="billingAddress[city]"]').first().fill('Frankfurt');
-  52 |     await registerForm.locator('select[name="billingAddress[countryId]"]').first().selectOption({ label: 'Deutschland' });
+> 43 |     await page.getByLabel(/Anrede|Salutation/i).selectOption({ index: 1 });
+     |                                                 ^ Error: locator.selectOption: Error: strict mode violation: getByLabel(/Anrede|Salutation/i) resolved to 2 elements:
+  44 |     await page.getByLabel(/Vorname|First name/i).fill('Jonilda');
+  45 |     await page.getByLabel(/Nachname|Last name/i).fill('Snow');
+  46 |     await page.getByLabel(/E-Mail|Email/i).fill(`guest_${Date.now()}@example.com`);
+  47 |     await page.getByLabel(/Straße|Street/i).fill('Teststraße 123');
+  48 |     await page.getByLabel(/PLZ|Postal|Zip/i).fill('10115');
+  49 |     await page.getByLabel(/Ort|City/i).fill('Frankfurt');
+  50 |     await page.getByLabel(/Land|Country/i).selectOption({ label: /Deutschland|Germany/i });
+  51 | 
+  52 |     await page.locator('form[action*="/checkout/register"] button[type="submit"], .register-submit button, button[type="submit"].btn-primary').first().click();
   53 | 
-  54 |     const submitRegisterBtn = registerForm.locator('button[type="submit"].btn-primary').first();
-  55 |     await submitRegisterBtn.click();
-  56 | 
-  57 |     await expect(page).toHaveURL(/\/checkout\/confirm/);
-  58 | 
-  59 |     const cashOnDelivery = page.locator('label', { hasText: /Nachnahme|Cash on delivery/i }).first();
-  60 |     if (await cashOnDelivery.isVisible()) {
-  61 |       await cashOnDelivery.click();
-  62 |     }
-  63 | 
-  64 |     const tosCheckbox = page.locator('input[name="tos"], #tos');
-  65 |     await tosCheckbox.check({ force: true });
+  54 |     await expect(page).toHaveURL(/\/checkout\/confirm/);
+  55 | 
+  56 |     const cashOnDelivery = page.locator('label', { hasText: /Nachnahme|Cash on delivery/i }).first();
+  57 |     if (await cashOnDelivery.isVisible()) {
+  58 |       await cashOnDelivery.click();
+  59 |     }
+  60 | 
+  61 |     await page.locator('input[name="tos"], #tos').check({ force: true });
+  62 | 
+  63 |     await page.locator('#confirmFormSubmit').click();
+  64 | 
+  65 |     await expect(page).toHaveURL(/\/checkout\/finish/);
   66 | 
-  67 |     const submitOrderBtn = page.locator('#confirmFormSubmit');
-  68 |     await submitOrderBtn.click();
+  67 |     await expect(page.locator('.finish-header, .checkout-finish-header')).toBeVisible();
+  68 |     await expect(page.getByText(/Bestellnummer|Order number/i)).toBeVisible();
   69 | 
-  70 |     await expect(page).toHaveURL(/\/checkout\/finish/);
-  71 | 
-  72 |     const finishHeader = page.locator('.finish-header, .checkout-finish-header');
-  73 |     await expect(finishHeader).toBeVisible();
-  74 | 
-  75 |     const orderNumberText = page.locator('.finish-ordernumber, .checkout-aside-summary-value');
-  76 |     await expect(orderNumberText).toContainText(/Bestellnummer|Order number/i);
-  77 | 
-  78 |     const cartBadge = page.locator('.header-cart-total');
-  79 |     await expect(cartBadge).toHaveText(/0/);
-  80 |   });
-  81 | });
+  70 |     await expect(page.getByRole('link', { name: /Warenkorb enthält 0|0 Positionen/i })).toBeVisible();
+  71 |   });
+  72 | });
 ```
