@@ -1,0 +1,1 @@
+# shopware-guest-checkout-e2e
